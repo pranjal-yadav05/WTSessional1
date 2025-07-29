@@ -1,0 +1,25 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Q3a Master Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="width:100%; background:#eee; padding:10px;">Header (Common)</div>
+        <div style="display:flex; min-height:400px;">
+            <div style="width:200px; background:#f0f0f0; padding:10px;">
+                <asp:RadioButtonList ID="rblDept" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rblDept_SelectedIndexChanged">
+                    <asp:ListItem>IT</asp:ListItem>
+                    <asp:ListItem>CE</asp:ListItem>
+                    <asp:ListItem>EC</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <div style="flex:1; padding:10px;">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+        <div style="width:100%; background:#eee; padding:10px;">Footer (Common)</div>
+    </form>
+</body>
+</html> 
